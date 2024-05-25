@@ -1,9 +1,11 @@
-with open('circle.txt', 'r') as cf:
+circle_f = input('Введите путь к первому файлу: ')
+with open(circle_f, 'r') as cf:
     # считываем данные для круга
     center_x, center_y = map(float, cf.readline().split())
     radius = float(cf.readline())
 
-with open('dots.txt', 'r') as df:
+dots_f = input('Введите путь к второму файлу: ')
+with open(dots_f, 'r') as df:
     # читаем строчки файла с точками пока строчки не будут пустыми
     while True: # бесконечный цикл
         line = df.readline()
