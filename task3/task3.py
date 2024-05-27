@@ -24,15 +24,14 @@ def rep_form(tests_, values_j_):
 
 
 def value_search(test_id, values):
-    # ищет значение теста по id в values.json, подразумевая, что он отсортирован по id
-    # в противном случае можно закомментить elif
+    # ищет значение теста по id в values.json
     value = ''
     for values_dict in values:
         if values_dict['id'] == test_id:
             value = values_dict['value']
             break
-        elif values_dict['id'] > test_id:
-            break
+        # elif values_dict['id'] > test_id:
+        #     break
     return value
 
 
