@@ -37,6 +37,7 @@ def value_search(test_id, values):
 
 tests_file = input('Введите путь к файлу tests.json: ')
 value_file = input('Введите путь к файлу values.json: ')
+report_file = input('Введите путь к файлу report.json: ')
 vf = open(value_file, 'r')
 tf = open(tests_file, 'r')
 
@@ -49,6 +50,6 @@ report = rep_form(tests, values_j)
 
 vf.close()
 tf.close()
-with open('report.json', 'a') as rf:
+with open(report_file, 'a') as rf:
     rf.writelines(json.dumps({"tests": report}, indent=2))
 print('Отчет сохранен как report.json')
